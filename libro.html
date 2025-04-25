@@ -9,18 +9,37 @@
       margin: 0;
       background: black;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      overflow: hidden;
       height: 100vh;
     }
-    iframe {
+    #flipbook {
+      width: 90%;
+      height: 90%;
+      background: #222;
+    }
+    #flipbook img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
+      display: block;
+      margin: auto;
+      box-shadow: 0 0 20px #fff;
+      border-radius: 10px;
+    }
+    .page {
+      background: black;
     }
   </style>
 </head>
 <body>
-  <iframe src="index.html"></iframe>
+  <div id="flipbook">
+    <img src="pages/page0001.jpg" alt="Página 1">
+    <img src="pages/page0002.jpg" alt="Página 2">
+    <img src="pages/page0003.jpg" alt="Página 3">
+    <img src="pages/page0004.jpg" alt="Página 4">
+    <img src="pages/page0005.jpg" alt="Página 5">
+    <!-- Puedes seguir agregando más imágenes si quieres -->
+  </div>
 </body>
 </html>
