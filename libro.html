@@ -4,42 +4,46 @@
   <meta charset="UTF-8">
   <title>Flipbook - Los Judíos en Valmaseda</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js@master/lib/turn.min.js"></script>
   <style>
     body {
       margin: 0;
       background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       overflow: hidden;
-      height: 100vh;
     }
     #flipbook {
       width: 90%;
-      height: 90%;
-      background: #222;
-    }
-    #flipbook img {
-      width: 100%;
-      height: auto;
-      display: block;
+      height: 90vh;
       margin: auto;
-      box-shadow: 0 0 20px #fff;
-      border-radius: 10px;
+      position: relative;
+      top: 5vh;
     }
-    .page {
-      background: black;
+    #flipbook .page {
+      width: 100%;
+      height: 100%;
+      background: white;
+      background-size: cover;
+      background-position: center;
     }
   </style>
 </head>
 <body>
   <div id="flipbook">
-    <img src="pages/page0001.jpg" alt="Página 1">
-    <img src="pages/page0002.jpg" alt="Página 2">
-    <img src="pages/page0003.jpg" alt="Página 3">
-    <img src="pages/page0004.jpg" alt="Página 4">
-    <img src="pages/page0005.jpg" alt="Página 5">
-    <!-- Puedes seguir agregando más imágenes si quieres -->
+    <div class="page" style="background-image: url('pages/page0001.jpg');"></div>
+    <div class="page" style="background-image: url('pages/page0002.jpg');"></div>
+    <div class="page" style="background-image: url('pages/page0003.jpg');"></div>
+    <div class="page" style="background-image: url('pages/page0004.jpg');"></div>
+    <div class="page" style="background-image: url('pages/page0005.jpg');"></div>
+    <!-- Puedes seguir agregando más páginas aquí -->
   </div>
+
+  <script>
+    $("#flipbook").turn({
+      width: 800,
+      height: 600,
+      autoCenter: true
+    });
+  </script>
 </body>
 </html>
