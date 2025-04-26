@@ -1,42 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Los Judíos en Valmaseda</title>
-  <meta property="og:title" content="Los Judíos en Valmaseda" />
-  <meta property="og:description" content="Flipbook interactivo sobre la historia judía en Valmaseda." />
-  <meta property="og:image" content="https://i.imgur.com/NraPcgW.jpg" />
-  <meta property="og:url" content="https://ignaciosilvosa.github.io/judiosvalmaseda/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Los Judíos en Valmaseda">
+  <meta property="og:description" content="Flipbook interactivo sobre la historia judía en Valmaseda.">
+  <meta property="og:image" content="https://ignaciosilvosa.github.io/judiosvalmaseda/portada.jpg">
+  <meta property="og:url" content="https://ignaciosilvosa.github.io/judiosvalmaseda/">
   <style>
     body {
       margin: 0;
-      background-color: black;
+      background: black;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      flex-direction: column;
       height: 100vh;
     }
-    #portada {
+    img {
       max-width: 90%;
       height: auto;
-      margin-bottom: 30px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.3);
     }
-    #entrar {
-      font-size: 1.5rem;
-      padding: 10px 30px;
-      background: #ffffff;
+    .button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background: white;
+      color: black;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #ddd;
     }
   </style>
 </head>
 <body>
-  <img id="portada" src="portada.jpg" alt="Los Judíos en Valmaseda">
-  <button id="entrar" onclick="window.location.href='libro.html'">Entrar al Libro</button>
+  <img src="portada.jpg" alt="Portada del libro">
+  <button class="button" onclick="location.href='libro.html'">Entrar en el libro</button>
 </body>
 </html>
